@@ -1,0 +1,89 @@
+/* Select all and set margins and padding to 0 */
+* {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+}
+
+body {
+     background-color: black;
+     color: #545454;
+     display: flex;
+     font-family: sans-serif;
+     justify-content: center;
+}
+
+.container {
+     background-color: #14BDAC;
+     border-radius: 20px;
+     margin: 50px;
+     padding: 50px;
+}
+
+.title {
+     text-align: center;
+}
+
+.title span {
+     color: #f2EBD3;
+}
+
+.status-reset {
+     display: flex;
+     justify-content: space-around;
+     margin-top: 25px;
+     font-size: 25px;
+     height: 30px;
+}
+
+.status span {
+     color: #f2EBD3;
+}
+
+.reset {
+     cursor: pointer;
+}
+
+.reset:hover {
+     color: #F2EBD3;
+}
+
+.game-grid {
+     background-color: #0DA192;
+     display: grid;
+     /* 9x9 grid size of 1 fractional unit */
+     grid-template-columns: repeat(3, 1fr);
+     grid-template-rows: repeat(3, 1fr);
+     grid-gap: 15px;
+     margin-top: 50px;
+}
+
+.game-cell {
+     background-color: #14BDAC;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     cursor: pointer;
+     height: 200px;
+     width: 200px;
+}
+
+.x, .o {
+     cursor: auto;
+}
+
+/* Pseudo elements 'after' to add content*/
+.x::after {
+     content: '×';
+     font-size: 200px;
+}
+
+.o::after {
+     content: '○';
+     color: #f2EBD3;
+     font-size: 200px;
+}
+
+.win::after {
+     color: #bd022f;
+}
